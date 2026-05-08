@@ -1,0 +1,173 @@
+.testimonials {
+  background: #121212;
+  position: relative;
+  padding: 100px 0;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Big mixed-color title */
+.testimonials__title {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0 0 36px;
+  font-family: 'Inter', sans-serif;
+}
+
+.testimonials__title-soft {
+  color: #c2b5b5;
+}
+
+.testimonials__title-accent {
+  color: #f2df23;
+}
+
+/* Pills row */
+.testimonials__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.testimonials__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 400;
+  background: #1a1a1a;
+  border: 1px solid #6f6f72;
+  border-radius: var(--radius-pill);
+}
+
+.testimonials__pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f2df23;
+}
+
+/* 4-column grid */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Cards */
+.tcard {
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid #6f6f72;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 320px;
+  transition: transform 0.4s ease;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.tcard:hover {
+  transform: translateY(-4px);
+}
+
+.tcard--yellow {
+  background: #f2df23;
+  color: #000000;
+}
+
+.tcard--dark {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.tcard__logo {
+  color: currentColor;
+  margin-bottom: 4px;
+}
+
+.tcard__quote {
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 500;
+  flex: 1;
+}
+
+.tcard--dark .tcard__quote {
+  color: #f2df23;
+}
+
+.tcard__person {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tcard__role {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.tcard--yellow .tcard__role {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.tcard__name {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.tcard__quote-mark {
+  position: absolute;
+  bottom: 8px;
+  right: 18px;
+  font-size: 110px;
+  line-height: 0.5;
+  font-weight: 800;
+  font-family: Georgia, serif;
+  color: currentColor;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.tcard--yellow .tcard__quote-mark {
+  color: #000;
+}
+
+.tcard--dark .tcard__quote-mark {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials__title {
+    font-size: clamp(40px, 12vw, 72px);
+  }
+}

@@ -1,0 +1,138 @@
+.services {
+  background: var(--bg-primary);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.services .container {
+  position: relative;
+  z-index: 2;
+}
+
+.services__head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+  max-width: 800px;
+}
+
+.services__title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.services__title em {
+  font-style: normal;
+  background: linear-gradient(180deg, var(--accent-bright), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: none;
+}
+
+.services__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: fit-content;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--accent);
+  transition: gap 0.3s ease;
+}
+
+.services__link:hover {
+  gap: 14px;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.service-card {
+  position: relative;
+  padding: 36px 28px;
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0.6), rgba(20, 20, 20, 0.6));
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  transition: all 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 280px;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(232, 211, 0, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.service-card:hover {
+  border-color: rgba(232, 211, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -30px rgba(232, 211, 0, 0.25);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card__icon {
+  font-size: 32px;
+  color: var(--accent);
+}
+
+.service-card__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.service-card__desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-top: auto;
+}
+
+.service-card__arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-card__arrow {
+  background: var(--accent);
+  color: #000;
+  transform: rotate(-45deg);
+}

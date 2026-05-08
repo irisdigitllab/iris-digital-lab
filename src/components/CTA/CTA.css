@@ -1,0 +1,222 @@
+.cta {
+  position: relative;
+  padding: 120px 0;
+  background: #121212;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cta__stripes {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 60px,
+      rgba(0, 0, 0, 0.4) 60px,
+      rgba(0, 0, 0, 0.4) 62px,
+      transparent 62px,
+      transparent 120px
+    );
+  opacity: 0.5;
+}
+
+.cta__noise {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/particulas.png');
+  background-size: 600px;
+  background-repeat: repeat;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+}
+
+.cta__hex {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.cta__hex--tl { top: 6%; left: 4%; width: 70px; }
+.cta__hex--tr { top: 4%; right: 4%; width: 90px; }
+.cta__hex--bl { bottom: 8%; left: 5%; width: 70px; }
+.cta__hex--br { bottom: 14%; right: 6%; width: 80px; }
+
+.cta__glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+}
+.cta__glow--left {
+  left: -8%;
+  top: 35%;
+  background: radial-gradient(circle, rgba(232, 211, 0, 0.3), transparent 65%);
+}
+.cta__glow--right {
+  right: -8%;
+  top: 25%;
+  background: radial-gradient(circle, rgba(232, 211, 0, 0.35), transparent 65%);
+}
+
+.cta__inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.cta__headline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  margin: 0;
+}
+
+.cta__line {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 32px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta__word {
+  font-size: clamp(56px, 10vw, 144px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta__word--soft {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 1vw, 16px);
+  color: #c2b5b5;
+}
+
+.cta__t-outline {
+  font-size: clamp(56px, 10vw, 144px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  -webkit-text-stroke: 2px var(--accent);
+  color: transparent;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta__inline-iso {
+  height: clamp(50px, 8vw, 110px);
+  width: auto;
+  margin: 0 -8px;
+}
+
+/* Connect badge */
+.cta__connect {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 14px 14px 28px;
+  background: var(--accent);
+  color: #000;
+  border-radius: var(--radius-pill);
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.cta__connect:hover {
+  transform: scale(1.05);
+}
+
+.cta__connect-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+
+.cta__chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.cta__chip {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pill);
+  transition: all 0.3s ease;
+}
+
+.cta__chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cta__portfolio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--accent);
+  margin-top: 8px;
+  transition: gap 0.3s ease;
+}
+
+.cta__portfolio:hover {
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .cta__hex {
+    width: 50px !important;
+  }
+  .cta__connect {
+    font-size: 18px;
+    padding: 10px 10px 10px 18px;
+  }
+  .cta__connect-arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
