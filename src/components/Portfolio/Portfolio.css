@@ -2,7 +2,7 @@
   background: var(--bg-primary);
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .portfolio .container {
@@ -40,6 +40,25 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 36px;
+}
+
+@media (max-width: 768px) {
+  .portfolio__filters {
+    position: sticky;
+    top: 64px;
+    z-index: 30;
+    margin: 0 -20px 24px;
+    padding: 12px 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background: rgba(18, 18, 18, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    scrollbar-width: none;
+  }
+  .portfolio__filters::-webkit-scrollbar { display: none; }
+  .pf-chip { flex-shrink: 0; white-space: nowrap; }
 }
 
 .pf-chip {

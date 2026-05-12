@@ -26,3 +26,8 @@ scripts/
 
 # Local Netlify folder
 .netlify
+
+# Raw source assets (procesados/copiados manualmente a /public)
+videos de servicios/
+fotos/
+.claude/settings.local.json

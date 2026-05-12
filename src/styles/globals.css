@@ -20,7 +20,9 @@ html, body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* `clip` evita scroll horizontal sin convertir el doc en scroll container,
+     necesario para que position:sticky funcione (ej. filtros del Portfolio). */
+  overflow-x: clip;
 }
 
 a {

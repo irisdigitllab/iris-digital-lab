@@ -6,6 +6,22 @@ import { useLang } from '../../i18n/LanguageContext.jsx'
 import './ProjectModal.css'
 
 const VideoEmbed = ({ video, title }) => {
+  if (video.type === 'local') {
+    return (
+      <div className="pm-video">
+        <video
+          src={video.src}
+          controls
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+      </div>
+    )
+  }
+
   const src =
     video.type === 'vimeo'
       ? `https://player.vimeo.com/video/${video.id}?title=0&byline=0&portrait=0`

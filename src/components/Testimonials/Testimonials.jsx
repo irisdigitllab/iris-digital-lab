@@ -1,4 +1,5 @@
 import Particles from '../Particles/Particles.jsx'
+import TypewriterText from '../TypewriterText/TypewriterText.jsx'
 import { useLang } from '../../i18n/LanguageContext.jsx'
 import './Testimonials.css'
 
@@ -43,7 +44,7 @@ const Testimonials = () => {
       <div className="container">
         <h2 className="testimonials__title" data-reveal>
           <span className="testimonials__title-soft">{t.testimonials.titleA}</span>{' '}
-          <span className="testimonials__title-accent">{t.testimonials.titleB}</span>
+          <TypewriterText as="span" className="testimonials__title-accent" text={t.testimonials.titleB} triggerOnView speed={42} />
         </h2>
 
         <div className="testimonials__pills" data-stagger>

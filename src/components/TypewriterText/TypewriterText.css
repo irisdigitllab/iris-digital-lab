@@ -1,0 +1,30 @@
+.tw {
+  display: inline-block;
+  color: inherit;
+}
+
+.tw__text {
+  display: inline;
+  color: inherit;
+  -webkit-background-clip: inherit;
+          background-clip: inherit;
+  background: inherit;
+}
+
+.tw__caret {
+  display: inline-block;
+  width: 0.06em;
+  height: 0.82em;
+  background: currentColor;
+  margin-left: 0.04em;
+  vertical-align: -0.05em;
+  animation: tw-caret-blink 0.6s steps(1) infinite;
+}
+
+.tw--done .tw__caret {
+  display: none;
+}
+
+@keyframes tw-caret-blink {
+  50% { opacity: 0; }
+}

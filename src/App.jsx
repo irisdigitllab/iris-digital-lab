@@ -2,15 +2,12 @@ import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import { useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar.jsx'
-import Hero from './components/Hero/Hero.jsx'
-import Services from './components/Services/Services.jsx'
-import Portfolio from './components/Portfolio/Portfolio.jsx'
-import CTA from './components/CTA/CTA.jsx'
-import Testimonials from './components/Testimonials/Testimonials.jsx'
-import ServicesGrid from './components/ServicesGrid/ServicesGrid.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import Cursor from './components/Cursor/Cursor.jsx'
+import Home from './pages/Home.jsx'
+import ServicePage from './pages/ServicePage.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -70,18 +67,17 @@ function App() {
     })
 
     return () => ctx.revert()
-  }, [])
+  }, [location.pathname])
 
   return (
     <>
+      <Cursor />
       <Navbar />
       <main>
-        <Hero />
-        <Services />
-        <Portfolio />
-        <CTA />
-        <Testimonials />
-        <ServicesGrid />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
+        </Routes>
       </main>
       <Footer />
     </>

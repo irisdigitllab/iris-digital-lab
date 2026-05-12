@@ -12,6 +12,20 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Netlify form detection (hidden) — keeps the React form working with Netlify Forms -->
+    <form name="quote" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="company" />
+      <input type="text" name="services" />
+      <input type="text" name="budget" />
+      <input type="text" name="timeline" />
+      <textarea name="details"></textarea>
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
