@@ -1,53 +1,53 @@
 import Particles from '../Particles/Particles.jsx'
+import { useLang } from '../../i18n/LanguageContext.jsx'
 import './Testimonials.css'
 
+// Quotes are kept verbatim (proper names / brand attribution).
 const testimonials = [
   {
-    quote: 'IRIS Digital Lab is a game-changer! They built a stunning website and used AI automation to scale our marketing efforts. Our efficiency has never been higher.',
+    quote:
+      'IRIS Digital Lab is a game-changer! They built a stunning website and used AI automation to scale our marketing efforts. Our efficiency has never been higher.',
     name: 'J. AMANDER',
     role: 'Ceo of Capital Agency',
     variant: 'yellow',
   },
   {
-    quote: 'Incredible team! IRIS Digital Lab combines sleek web design with powerful AI-driven marketing. They didn\'t just give us a new look; they automated our growth.',
+    quote:
+      "Incredible team! IRIS Digital Lab combines sleek web design with powerful AI-driven marketing. They didn't just give us a new look; they automated our growth.",
     name: 'J. BARRON',
     role: 'President, Newz Jsc',
     variant: 'dark',
   },
   {
-    quote: '"Artfolio ability to create a high quality user interface stands out. It\'s something we placed a premium on. Recommended!."',
+    quote:
+      '"Artfolio ability to create a high quality user interface stands out. It\'s something we placed a premium on. Recommended!."',
     name: 'H. JACKSON',
     role: 'President, Godila Jsc',
     variant: 'yellow',
   },
   {
-    quote: '"Artfolio ability to create a high quality user interface stands out. It\'s something we placed a premium on. Recommended!."',
+    quote:
+      '"Artfolio ability to create a high quality user interface stands out. It\'s something we placed a premium on. Recommended!."',
     name: 'H. JACKSON',
     role: 'President, Godila Jsc',
     variant: 'dark',
   },
 ]
 
-const benefits = [
-  'Creative Excellence',
-  'Client-Centered',
-  'Results-Driven',
-  'Global Reach',
-  'Satisfy Clients',
-]
-
 const Testimonials = () => {
+  const { t } = useLang()
+
   return (
     <section className="testimonials section" id="testimonials">
       <Particles density={0.00007} />
       <div className="container">
         <h2 className="testimonials__title" data-reveal>
-          <span className="testimonials__title-soft">WHAT OUR</span>{' '}
-          <span className="testimonials__title-accent">CLIENTS SAY</span>
+          <span className="testimonials__title-soft">{t.testimonials.titleA}</span>{' '}
+          <span className="testimonials__title-accent">{t.testimonials.titleB}</span>
         </h2>
 
         <div className="testimonials__pills" data-stagger>
-          {benefits.map((b) => (
+          {t.testimonials.benefits.map((b) => (
             <span key={b} className="testimonials__pill" data-stagger-item>
               <span className="testimonials__pill-dot" />
               {b}
@@ -56,10 +56,10 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonials__grid" data-stagger>
-          {testimonials.map((t, i) => (
+          {testimonials.map((tm, i) => (
             <article
               key={i}
-              className={`tcard tcard--${t.variant}`}
+              className={`tcard tcard--${tm.variant}`}
               data-stagger-item
             >
               <div className="tcard__logo" aria-hidden="true">
@@ -69,11 +69,11 @@ const Testimonials = () => {
                 </svg>
               </div>
 
-              <p className="tcard__quote">{t.quote}</p>
+              <p className="tcard__quote">{tm.quote}</p>
 
               <div className="tcard__person">
-                <div className="tcard__role">{t.role}</div>
-                <div className="tcard__name">{t.name}</div>
+                <div className="tcard__role">{tm.role}</div>
+                <div className="tcard__name">{tm.name}</div>
               </div>
 
               <span className="tcard__quote-mark" aria-hidden="true">&rdquo;</span>

@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { useLang } from '../../i18n/LanguageContext.jsx'
 import './Hero.css'
 
 const Hero = () => {
   const root = useRef(null)
   const headlineRef = useRef(null)
+  const { t } = useLang()
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -65,20 +67,18 @@ const Hero = () => {
 
       <div className="container hero__inner">
         <h1 ref={headlineRef} className="hero__headline">
-          <div className="hero__line hero__line--soft">WE BUILD</div>
-          <div className="hero__line hero__line--accent">BRANDS THAT</div>
-          <div className="hero__line hero__line--soft">MEAN BUSINESS.</div>
+          <div className="hero__line hero__line--soft">{t.hero.line1}</div>
+          <div className="hero__line hero__line--accent">{t.hero.line2}</div>
+          <div className="hero__line hero__line--soft">{t.hero.line3}</div>
         </h1>
 
         <div className="hero__pill">
           <div className="hero__pill-icon" aria-hidden="true">
             <img src="/assets/iris-isotype.svg" alt="" />
           </div>
-          <p className="hero__pill-text">
-            Website development &amp; brand identity design for South Florida companies ready to grow.
-          </p>
+          <p className="hero__pill-text">{t.hero.pillText}</p>
           <a href="#contact" className="hero__pill-cta">
-            <span>Contact US</span>
+            <span>{t.hero.pillCta}</span>
             <span className="hero__pill-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -88,7 +88,7 @@ const Hero = () => {
         </div>
 
         <div className="hero__chips">
-          {['Marketing', 'Website Development', 'Graphic Design', 'Video Production', 'Meta and Google Ads', 'AI agent workflows'].map((c) => (
+          {t.hero.chips.map((c) => (
             <span key={c} className="hero__chip">{c}</span>
           ))}
         </div>

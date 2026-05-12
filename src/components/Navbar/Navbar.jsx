@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
+import LanguageToggle from '../../i18n/LanguageToggle.jsx'
+import { useLang } from '../../i18n/LanguageContext.jsx'
 import './Navbar.css'
 
 const Navbar = () => {
   const navRef = useRef(null)
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useLang()
 
   useEffect(() => {
     gsap.fromTo(
@@ -24,16 +28,20 @@ const Navbar = () => {
       className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
     >
       <div className="navbar__inner container">
-        <a href="#top" className="navbar__logo" aria-label="IRIS Digital Lab">
+        <Link to="/" className="navbar__logo" aria-label="IRIS Digital Lab">
           <img src="/assets/iris-logo.svg" alt="IRIS Digital Lab" />
-        </a>
+        </Link>
 
         <nav className="navbar__nav">
-          <a href="#top">Home</a>
-          <a href="#services">Services</a>
-          <a href="#work">Our Portfolio</a>
-          <a href="#contact">Contact Us</a>
+          <Link to="/">{t.nav.home}</Link>
+          <Link to="/#services">{t.nav.services}</Link>
+          <Link to="/#work">{t.nav.portfolio}</Link>
+          <Link to="/#contact">{t.nav.contact}</Link>
         </nav>
+
+        <div className="navbar__actions">
+          <LanguageToggle />
+        </div>
       </div>
     </header>
   )

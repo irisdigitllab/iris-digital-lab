@@ -101,9 +101,16 @@ const Particles = ({
 
     const onMouseMove = (e) => {
       const rect = canvas.getBoundingClientRect()
-      state.mouse.x = e.clientX - rect.left
-      state.mouse.y = e.clientY - rect.top
-      state.mouse.active = true
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      // Active only when pointer is inside the canvas bounds
+      if (x >= 0 && y >= 0 && x <= rect.width && y <= rect.height) {
+        state.mouse.x = x
+        state.mouse.y = y
+        state.mouse.active = true
+      } else {
+        state.mouse.active = false
+      }
     }
     const onMouseLeave = () => {
       state.mouse.active = false
@@ -123,17 +130,24 @@ const Particles = ({
     rafRef.current = requestAnimationFrame(tick)
 
     const parent = canvas.parentElement
-    parent.addEventListener('mousemove', onMouseMove)
-    parent.addEventListener('mouseleave', onMouseLeave)
+    // Listen on window so the handler fires even when the cursor is over
+    // child elements that sit on top of the canvas (cards, overlays, etc.)
+    window.addEventListener('mousemove', onMouseMove, { passive: true })
+    window.addEventListener('mouseleave', onMouseLeave)
     window.addEventListener('resize', onResize)
     document.addEventListener('visibilitychange', onVisibility)
 
+    // Re-setup when parent's size changes (filter swaps, image loads, etc.)
+    const ro = new ResizeObserver(() => setup())
+    ro.observe(parent)
+
     return () => {
       cancelAnimationFrame(rafRef.current)
-      parent.removeEventListener('mousemove', onMouseMove)
-      parent.removeEventListener('mouseleave', onMouseLeave)
+      window.removeEventListener('mousemove', onMouseMove)
+      window.removeEventListener('mouseleave', onMouseLeave)
       window.removeEventListener('resize', onResize)
       document.removeEventListener('visibilitychange', onVisibility)
+      ro.disconnect()
     }
   }, [density, color, speed, repelRadius, repelStrength])
 

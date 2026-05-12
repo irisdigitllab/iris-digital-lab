@@ -19,7 +19,14 @@
 .navbar__inner {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 32px;
+}
+
+.navbar__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .navbar__logo {
@@ -41,6 +48,7 @@
 .navbar__nav {
   display: flex;
   gap: 36px;
+  margin-left: 28px;
 }
 
 .navbar__nav a {
@@ -73,5 +81,11 @@
 @media (max-width: 768px) {
   .navbar__nav {
     display: none;
+  }
+  .navbar__inner {
+    gap: 16px;
+  }
+  .navbar__actions {
+    margin-left: auto;
   }
 }

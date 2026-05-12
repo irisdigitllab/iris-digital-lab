@@ -1,0 +1,241 @@
+.pm-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(3, 3, 3, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 4vw, 40px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.pm-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  max-height: calc(100vh - clamp(24px, 8vw, 80px));
+  max-height: calc(100dvh - clamp(24px, 8vw, 80px));
+  background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7);
+  margin: auto;
+}
+
+.pm-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border-card);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.pm-close:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.pm-content {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(24px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.pm-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+  padding-right: 56px;
+}
+
+.pm-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(232, 211, 0, 0.12);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pm-title {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.pm-summary {
+  font-size: clamp(15px, 1.4vw, 17px);
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Videos */
+.pm-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pm-videos--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 820px) {
+  .pm-videos--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pm-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--border-card);
+}
+
+.pm-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Description + meta */
+.pm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 820px) {
+  .pm-grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+  }
+}
+
+.pm-description h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.pm-description p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pm-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  margin: 0;
+}
+
+.pm-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pm-meta dt {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-card-meta);
+  font-weight: 600;
+}
+
+.pm-meta dd {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.pm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  transition: gap 0.25s ease;
+}
+
+.pm-link:hover {
+  gap: 10px;
+}
+
+/* Scrollbar inside modal */
+.pm-content::-webkit-scrollbar {
+  width: 8px;
+}
+.pm-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.pm-content::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+@media (max-width: 560px) {
+  .pm-overlay {
+    padding: 0;
+    align-items: stretch;
+  }
+  .pm-dialog {
+    max-height: 100vh;
+    max-height: 100dvh;
+    border-radius: 0;
+    margin: 0;
+  }
+  .pm-meta {
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,9 +2,11 @@ import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import { useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import Services from './components/Services/Services.jsx'
+import Portfolio from './components/Portfolio/Portfolio.jsx'
 import CTA from './components/CTA/CTA.jsx'
 import Testimonials from './components/Testimonials/Testimonials.jsx'
 import ServicesGrid from './components/ServicesGrid/ServicesGrid.jsx'
@@ -13,6 +15,19 @@ import Footer from './components/Footer/Footer.jsx'
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (!location.hash) return
+    const id = location.hash.replace('#', '')
+    const el = document.getElementById(id)
+    if (el) {
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    }
+  }, [location])
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray('[data-reveal]').forEach((el) => {
@@ -63,6 +78,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Portfolio />
         <CTA />
         <Testimonials />
         <ServicesGrid />
