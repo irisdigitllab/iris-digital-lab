@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { useLang } from '../../i18n/LanguageContext.jsx'
 import TypewriterText from '../TypewriterText/TypewriterText.jsx'
+import RotatingWord from '../RotatingWord/RotatingWord.jsx'
 import './Hero.css'
 
 const Hero = () => {
@@ -107,7 +108,10 @@ const Hero = () => {
           <div className="hero__line hero__line--accent">
             <TypewriterText text={t.hero.line2} startDelay={550} speed={48} />
           </div>
-          <div className="hero__line hero__line--soft">{t.hero.line3}</div>
+          <div className="hero__line hero__line--soft">
+            {t.hero.line3}{' '}
+            <RotatingWord words={t.hero.line3Words} className="hero__rotword" />
+          </div>
         </h1>
 
         <div className="hero__pill" ref={pillRef} onMouseMove={handlePillMove}>

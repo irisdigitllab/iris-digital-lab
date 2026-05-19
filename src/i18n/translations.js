@@ -10,7 +10,8 @@ export const translations = {
     hero: {
       line1: 'CONSTRUIMOS',
       line2: 'MARCAS QUE',
-      line3: 'GENERAN NEGOCIO.',
+      line3: 'GENERAN',
+      line3Words: ['NEGOCIO', 'RESULTADOS', 'CRECIMIENTO', 'IMPACTO'],
       pillText:
         'Desarrollo web y diseño de identidad de marca para empresas listas para crecer.',
       pillCta: 'Contáctanos',
@@ -180,7 +181,8 @@ export const translations = {
     hero: {
       line1: 'WE BUILD',
       line2: 'BRANDS THAT',
-      line3: 'MEAN BUSINESS.',
+      line3: 'MEAN',
+      line3Words: ['BUSINESS', 'RESULTS', 'GROWTH', 'IMPACT'],
       pillText:
         'Website development & brand identity design for South Florida companies ready to grow.',
       pillCta: 'Contact Us',

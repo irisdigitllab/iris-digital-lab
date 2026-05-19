@@ -59,12 +59,12 @@
   align-items: center;
   gap: 60px;
   width: max-content;
-  animation: marquee-scroll 38s linear infinite;
+  animation: marquee-scroll 18s linear infinite;
 }
 
 .hero__marquee-track--reverse {
   animation-direction: reverse;
-  animation-duration: 46s;
+  animation-duration: 22s;
 }
 
 .hero__marquee-track img {
@@ -151,6 +151,10 @@
   color: var(--accent);
   position: relative;
   min-height: 1em;
+}
+
+.hero__rotword {
+  color: var(--accent);
 }
 
 
