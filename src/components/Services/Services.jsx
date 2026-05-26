@@ -46,7 +46,7 @@ const ICONS = [
 // Resto: placeholders con covers del portfolio mientras llegan las fotos definitivas.
 const SERVICE_MEDIA = [
   { type: 'image', src: covers.maqSmile },                                                         // Brand Identity
-  { type: 'image', src: covers.altech },                                                           // Website Dev
+  { type: 'image', src: '/assets/website-development.jpg' },                                        // Website Dev
   { type: 'video', src: '/videos/services/marketing-campaigns.mp4', poster: covers.smartChoice },  // Marketing
   { type: 'video', src: '/videos/services/video-production.mp4', poster: covers.finestDental },    // Video Production
   { type: 'image', src: covers.motion3d },                                                         // AI Automation

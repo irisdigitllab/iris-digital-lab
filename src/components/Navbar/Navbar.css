@@ -17,8 +17,7 @@
 }
 
 .navbar--open {
-  background: rgba(18, 18, 18, 0.98);
-  backdrop-filter: blur(20px);
+  background: #121212;
 }
 
 .navbar__inner {
@@ -126,8 +125,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(18, 18, 18, 0.98);
-  backdrop-filter: blur(24px);
+  background: #121212;
   z-index: 99;
   opacity: 0;
   pointer-events: none;

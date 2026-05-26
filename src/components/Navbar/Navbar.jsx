@@ -37,6 +37,7 @@ const Navbar = () => {
   }, [open])
 
   return (
+    <>
     <header
       ref={navRef}
       className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${open ? 'navbar--open' : ''}`}
@@ -66,16 +67,20 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
-      <div className={`navbar__mobile ${open ? 'is-open' : ''}`} aria-hidden={!open}>
-        <nav className="navbar__mobile-nav">
-          <Link to="/">{t.nav.home}</Link>
-          <Link to="/#services">{t.nav.services}</Link>
-          <Link to="/#work">{t.nav.portfolio}</Link>
-          <Link to="/#contact">{t.nav.contact}</Link>
-        </nav>
-      </div>
     </header>
+
+    {/* Rendered OUTSIDE <header>: the header carries a leftover GSAP transform,
+        which would make this fixed overlay position against the header box
+        (collapsing it) instead of the viewport. */}
+    <div className={`navbar__mobile ${open ? 'is-open' : ''}`} aria-hidden={!open}>
+      <nav className="navbar__mobile-nav">
+        <Link to="/">{t.nav.home}</Link>
+        <Link to="/#services">{t.nav.services}</Link>
+        <Link to="/#work">{t.nav.portfolio}</Link>
+        <Link to="/#contact">{t.nav.contact}</Link>
+      </nav>
+    </div>
+    </>
   )
 }
 

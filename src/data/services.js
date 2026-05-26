@@ -83,7 +83,7 @@ export const services = [
   },
   {
     slug: 'website-development',
-    media: covers.altech,
+    media: '/assets/website-development.jpg',
     relatedCategory: 'website-development',
     relatedSlugs: [
       'air-best-pros',

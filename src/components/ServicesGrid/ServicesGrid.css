@@ -171,14 +171,15 @@
 }
 
 .sg-card__media--website {
-  background-image: url('/assets/website-development.png');
-  background-position: center bottom;
-  background-size: contain;
+  background-image: url('/assets/website-development.jpg');
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
   flex: none;
   margin: 0 auto;
   width: 100%;
+  border-radius: 12px;
 }
 
 .sg-card--website {
