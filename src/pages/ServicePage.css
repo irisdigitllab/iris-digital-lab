@@ -51,6 +51,11 @@
   align-items: center;
 }
 
+/* When a portrait video is present, top-align both columns */
+.sp-hero__grid:has(.sp-hero__media--portrait) {
+  align-items: start;
+}
+
 .sp-hero__eyebrow {
   color: var(--accent);
   font-size: 13px;
@@ -92,6 +97,14 @@
   aspect-ratio: 4 / 3;
   box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.7);
 }
+
+/* Portrait (9:16) for vertical videos */
+.sp-hero__media--portrait {
+  aspect-ratio: 9 / 16;
+  width: min(100%, 360px);
+  margin-left: auto;
+}
+
 .sp-hero__media img,
 .sp-hero__media video {
   width: 100%;

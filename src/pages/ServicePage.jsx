@@ -93,7 +93,7 @@ const ServicePage = () => {
               </div>
             </div>
 
-            <div className="sp-hero__media" data-reveal>
+            <div className={`sp-hero__media${service.video ? ' sp-hero__media--portrait' : ''}`} data-reveal>
               {service.video ? (
                 <video
                   src={service.video}
