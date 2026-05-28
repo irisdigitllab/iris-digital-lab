@@ -165,10 +165,10 @@ export const services = [
   },
   {
     slug: 'marketing-campaigns',
-    media: 'https://images.unsplash.com/photo-1724862936518-ae7fcfc052c1?w=900&h=600&fit=crop&q=85',
+    media: '/portfolio/covers/mister-mortgage-cover.jpg',
     video: '/videos/services/marketing-campaigns.mp4',
     relatedCategory: 'marketing-campaigns',
-    relatedSlugs: ['smart-choice-dental'],
+    relatedSlugs: ['mister-mortgage-campaign', 'smart-choice-dental'],
     es: {
       title: 'Campañas de Marketing',
       promise:
@@ -240,10 +240,10 @@ export const services = [
   },
   {
     slug: 'video-production',
-    media: 'https://images.unsplash.com/photo-1611784728558-6c7d9b409cdf?w=900&h=600&fit=crop&q=85',
+    media: '/portfolio/covers/beyond-health-cover.jpg',
     video: '/videos/services/video-production.mp4',
     relatedCategory: 'video-production',
-    relatedSlugs: ['finest-dental', 'hvac-projects', 'altech-web-design', 'cinematic-3d-opener', 'gran-muthu-imperial'],
+    relatedSlugs: ['beyond-health', 'hilos-pdo', 'finest-dental', 'vitalis-coming-soon', 'vitalis-vet-video'],
     es: {
       title: 'Producción de Video',
       promise:

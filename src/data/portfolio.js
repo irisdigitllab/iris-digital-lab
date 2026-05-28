@@ -9,36 +9,61 @@ export const categories = [
   { slug: 'ai-automation',        label: 'AI Automation' },
 ]
 
-const cdn = (id) => `https://cdn.myportfolio.com/4be979e0-07d6-4385-8cac-816b19e45893/${id}`
-
-// 1280w cover variants (hashes from myportfolio responsive set) — usados como poster de videos
-export const covers = {
-  finestDental: cdn('a6d3de66-3ff0-4204-9b0f-883339df3a1d_carw_4x3x1280.png?h=c9db3087f99db766bec75fa3206d2949'),
-  maqSmile: cdn('41f3e3c4-f7d3-4c7f-ac93-a1738c04b7c8_carw_4x3x1280.png?h=7a5142b8f74a01619e9e85522ae9f6ce'),
-  hvac: cdn('ed51e0d4-d046-4381-86d1-d4d694dddf6a_carw_4x3x1280.png?h=27285f6e13c6545c57d03fbed89ec359'),
-  altech: cdn('198577e7-1fc9-4b01-aae1-59dd6d147d2b_carw_4x3x1280.png?h=1cd17137f194e614a8ebfecc8e1050b6'),
-  motion3d: cdn('99cb2f5c-0e15-4545-9b03-273d739b05d5_carw_4x3x1280.png?h=20359b73edc81a18eb80cea0ff877218'),
-  granMuthu: cdn('5c87a6cd-5771-4e7d-82f8-2038d548fc70_carw_4x3x1280.JPG?h=c1b7692f98bc10b8544a0cc265995c8c'),
-  smartChoice: cdn('ebaf49d4-621f-4eba-94ed-4197847ea148_carw_4x3x1280.jpg?h=061031c65d12c53cc4771879c2756c9d'),
-  immigration: cdn('12f7971d-8870-4c49-b9f5-34d9a1814323_carw_4x3x1280.png?h=2396714b97d04630174eeffb130fac7a'),
-}
-
 export const projects = [
   // ──────────────────────────────────────────────────────────────────
   // Video Production — videos locales optimizados
   // ──────────────────────────────────────────────────────────────────
+  {
+    slug: 'beyond-health',
+    title: 'Beyond Health — Nuevo Espacio',
+    client: 'Beyond Health',
+    category: 'video-production',
+    year: 2026,
+    cover: '/portfolio/covers/beyond-health-cover.jpg',
+    summary: 'Video de inauguración de nuevo espacio para clínica de estética avanzada.',
+    services: ['Branded content', 'Dirección creativa', 'Color grading', 'Post-producción'],
+    description:
+      'Pieza audiovisual de apertura para el nuevo espacio de Beyond Health. Foco en transmitir lujo, modernidad y confianza médica a través de ritmo visual y dirección de arte cuidada.',
+    videos: [{ type: 'local', src: '/videos/portfolio/beyond-health.mp4' }],
+  },
+  {
+    slug: 'hilos-pdo',
+    title: 'Beyond Health — Hilos PDO',
+    client: 'Beyond Health',
+    category: 'video-production',
+    year: 2026,
+    cover: '/portfolio/covers/hilos-pdo-cover.jpg',
+    summary: 'Contenido de marca para tratamiento estético de Hilos PDO.',
+    services: ['Branded content', 'Edición', 'Color grading'],
+    description:
+      'Video educativo y de marca para el procedimiento de Hilos PDO de Beyond Health. Diseñado para comunicar confianza médica y elevar la percepción del servicio.',
+    videos: [{ type: 'local', src: '/videos/portfolio/hilos-pdo.mp4' }],
+  },
   {
     slug: 'finest-dental',
     title: 'Finest Dental — Branded Video Content',
     client: 'Finest Dental, Naples FL',
     category: 'video-production',
     year: 2026,
-    cover: covers.finestDental,
+    cover: '/portfolio/covers/finest-dental-cover.jpg',
     summary: 'Contenido de marca para campañas de social media y publicidad digital.',
     services: ['Edición', 'Pacing', 'Color grading', 'Post-producción'],
     description:
       'Branded video content desarrollado para Finest Dental en Naples, Florida. Pieza pensada para campañas de social media y advertising digital, con foco en ritmo, color y consistencia visual.',
     videos: [{ type: 'local', src: '/videos/portfolio/finest-dental.mp4' }],
+  },
+  {
+    slug: 'vitalis-coming-soon',
+    title: 'Vitalis Animal Hospital — Coming Soon',
+    client: 'Vitalis Animal Hospital',
+    category: 'video-production',
+    year: 2026,
+    cover: '/portfolio/covers/vitalis-coming-soon-cover.jpg',
+    summary: 'Teaser de apertura para hospital veterinario en Cutler Bay, FL.',
+    services: ['Motion graphics', 'Edición', 'Color'],
+    description:
+      'Pieza de anticipación para el lanzamiento de Vitalis Animal Hospital. Diseñada para generar expectativa en redes sociales y comunicar profesionalismo desde el primer contacto.',
+    videos: [{ type: 'local', src: '/videos/portfolio/vitalis-coming-soon.mp4' }],
   },
   {
     slug: 'vitalis-vet-video',
@@ -58,12 +83,25 @@ export const projects = [
   // Marketing Campaigns
   // ──────────────────────────────────────────────────────────────────
   {
+    slug: 'mister-mortgage-campaign',
+    title: 'Mister Mortgage — Social Media Campaign',
+    client: 'Mister Mortgage USA',
+    category: 'marketing-campaigns',
+    year: 2026,
+    cover: '/portfolio/covers/mister-mortgage-cover.jpg',
+    summary: 'Video de advertencia para campaña hipotecaria en redes sociales.',
+    services: ['Edición', 'Motion', 'Optimización vertical'],
+    description:
+      'Pieza de video para campaña de awareness en redes sociales de Mister Mortgage USA. Foco en impacto inmediato y retención de la audiencia con mensaje directo.',
+    videos: [{ type: 'local', src: '/videos/portfolio/mister-mortgage.mp4' }],
+  },
+  {
     slug: 'smart-choice-dental',
     title: 'Smart Choice Dental — Social Media Video Campaign',
     client: 'Smart Choice Dental',
     category: 'marketing-campaigns',
     year: 2026,
-    cover: covers.smartChoice,
+    cover: '/portfolio/covers/smart-choice-cover.jpg',
     summary: 'Campaña de video vertical optimizada para social y advertising digital.',
     services: ['Edición', 'Color', 'Optimización vertical'],
     description:

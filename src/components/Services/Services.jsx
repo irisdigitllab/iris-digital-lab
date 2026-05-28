@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import Particles from '../Particles/Particles.jsx'
 import TypewriterText from '../TypewriterText/TypewriterText.jsx'
 import { useLang } from '../../i18n/LanguageContext.jsx'
-import { covers } from '../../data/portfolio.js'
 import { services as serviceData } from '../../data/services.js'
 import './Services.css'
 
@@ -45,11 +44,11 @@ const ICONS = [
 // Mapeo servicio (por índice) → media. Solo Marketing y Video Production usan video.
 // Resto: placeholders con covers del portfolio mientras llegan las fotos definitivas.
 const SERVICE_MEDIA = [
-  { type: 'image', src: '/assets/graphics-brands-bg.jpg' },                                        // Brand Identity
-  { type: 'image', src: '/assets/website-development.jpg' },                                        // Website Dev
-  { type: 'video', src: '/videos/services/marketing-campaigns.mp4', poster: covers.smartChoice },  // Marketing
-  { type: 'video', src: '/videos/services/video-production.mp4', poster: covers.finestDental },    // Video Production
-  { type: 'image', src: '/assets/ai-automation.png' },                                             // AI Automation
+  { type: 'image', src: 'https://images.unsplash.com/photo-1748326650737-33500fdfda30?w=600&h=400&fit=crop&q=85' }, // Brand Identity
+  { type: 'image', src: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop&q=85' },   // Website Dev
+  { type: 'image', src: '/portfolio/covers/mister-mortgage-cover.jpg' },                                           // Marketing
+  { type: 'image', src: '/portfolio/covers/beyond-health-cover.jpg' },                                            // Video Production
+  { type: 'image', src: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=600&h=400&fit=crop&q=85' }, // AI Automation
 ]
 
 const ArrowIcon = () => (
