@@ -41,45 +41,6 @@ export const projects = [
     videos: [{ type: 'local', src: '/videos/portfolio/finest-dental.mp4' }],
   },
   {
-    slug: 'maq-smile',
-    title: 'MAQ Smile — Branded Video Content',
-    client: 'MAQ Smile',
-    category: 'video-production',
-    year: 2026,
-    cover: covers.maqSmile,
-    summary: 'Storytelling visual para fortalecer la percepción de marca.',
-    services: ['Branded content', 'Storytelling', 'Edición'],
-    description:
-      'Contenido audiovisual centrado en marca para MAQ Smile. Énfasis en storytelling, ritmo y consistencia estética para reforzar la percepción de la marca.',
-    videos: [{ type: 'local', src: '/videos/portfolio/maq-smile.mp4' }],
-  },
-  {
-    slug: 'air-solution',
-    title: 'Air Solution — HVAC Promo',
-    client: 'Air Solution',
-    category: 'video-production',
-    year: 2026,
-    cover: covers.hvac,
-    summary: 'Video promocional para empresa de aires acondicionados.',
-    services: ['Promo', 'Edición', 'Color'],
-    description:
-      'Video promocional para Air Solution. Pieza enfocada en presentar servicios HVAC con un tono profesional y dinámico para campañas digitales.',
-    videos: [{ type: 'local', src: '/videos/portfolio/air-solution.mp4' }],
-  },
-  {
-    slug: 'migenes-air',
-    title: 'Migenes Air — Reel',
-    client: 'Migenes Air',
-    category: 'video-production',
-    year: 2026,
-    cover: '/portfolio/web/migenes-air.jpg',
-    summary: 'Reel publicitario para servicio HVAC.',
-    services: ['Reel', 'Edición', 'Post-producción'],
-    description:
-      'Reel publicitario para Migenes Air enfocado en captar atención en social media con ritmo visual rápido y mensaje claro.',
-    videos: [{ type: 'local', src: '/videos/portfolio/migenes-air.mp4' }],
-  },
-  {
     slug: 'vitalis-vet-video',
     title: 'Vitalis Animal Hospital — Branded Video',
     client: 'Vitalis Animal Hospital',
@@ -108,19 +69,6 @@ export const projects = [
     description:
       'Branded video content para Smart Choice Dental como parte de campañas de social media y digital advertising. Edición, pacing, color grading y optimización para plataformas verticales.',
     videos: [{ type: 'local', src: '/videos/portfolio/smart-choice.mp4' }],
-  },
-  {
-    slug: 'immigration-pro',
-    title: 'Immigration Pro — Social Media Reel',
-    client: 'Immigration Pro',
-    category: 'marketing-campaigns',
-    year: 2026,
-    cover: covers.immigration,
-    summary: 'Reel publicitario con foco en ritmo visual y post-producción pulida.',
-    services: ['Reel', 'Edición', 'Post-producción'],
-    description:
-      'Reel publicitario para Immigration Pro con énfasis en ritmo visual, pacing y una post-producción cuidada.',
-    videos: [{ type: 'local', src: '/videos/portfolio/immigration-pro.mp4' }],
   },
 
   // ──────────────────────────────────────────────────────────────────

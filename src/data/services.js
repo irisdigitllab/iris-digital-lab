@@ -9,9 +9,9 @@ import { covers } from './portfolio.js'
 export const services = [
   {
     slug: 'brand-identity',
-    media: covers.maqSmile,
-    relatedCategory: null, // sin categoría dedicada en portfolio aún
-    relatedSlugs: ['maq-smile', 'finest-dental'],
+    media: '/assets/graphics-brands-bg.jpg',
+    relatedCategory: null,
+    relatedSlugs: ['finest-dental'],
     es: {
       title: 'Diseño de Identidad de Marca',
       promise:
@@ -170,7 +170,7 @@ export const services = [
     media: covers.smartChoice,
     video: '/videos/services/marketing-campaigns.mp4',
     relatedCategory: 'marketing-campaigns',
-    relatedSlugs: ['smart-choice-dental', 'immigration-pro'],
+    relatedSlugs: ['smart-choice-dental'],
     es: {
       title: 'Campañas de Marketing',
       promise:
@@ -245,7 +245,7 @@ export const services = [
     media: covers.finestDental,
     video: '/videos/services/video-production.mp4',
     relatedCategory: 'video-production',
-    relatedSlugs: ['finest-dental', 'maq-smile', 'hvac-projects', 'altech-web-design', 'cinematic-3d-opener', 'gran-muthu-imperial'],
+    relatedSlugs: ['finest-dental', 'hvac-projects', 'altech-web-design', 'cinematic-3d-opener', 'gran-muthu-imperial'],
     es: {
       title: 'Producción de Video',
       promise:
@@ -317,7 +317,7 @@ export const services = [
   },
   {
     slug: 'ai-automation',
-    media: covers.motion3d,
+    media: '/assets/ai-automation.png',
     relatedCategory: null,
     relatedSlugs: [],
     es: {
