@@ -4,12 +4,10 @@
 //
 // Orden importa: el índice debe coincidir con t.services.items[i] del archivo de traducciones.
 
-import { covers } from './portfolio.js'
-
 export const services = [
   {
     slug: 'brand-identity',
-    media: '/assets/graphics-brands-bg.jpg',
+    media: 'https://images.unsplash.com/photo-1748326650737-33500fdfda30?w=900&h=600&fit=crop&q=85',
     relatedCategory: null,
     relatedSlugs: ['finest-dental'],
     es: {
@@ -83,7 +81,7 @@ export const services = [
   },
   {
     slug: 'website-development',
-    media: '/assets/website-development.jpg',
+    media: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&h=600&fit=crop&q=85',
     relatedCategory: 'website-development',
     relatedSlugs: [
       'air-best-pros',
@@ -167,7 +165,7 @@ export const services = [
   },
   {
     slug: 'marketing-campaigns',
-    media: covers.smartChoice,
+    media: 'https://images.unsplash.com/photo-1724862936518-ae7fcfc052c1?w=900&h=600&fit=crop&q=85',
     video: '/videos/services/marketing-campaigns.mp4',
     relatedCategory: 'marketing-campaigns',
     relatedSlugs: ['smart-choice-dental'],
@@ -242,7 +240,7 @@ export const services = [
   },
   {
     slug: 'video-production',
-    media: covers.finestDental,
+    media: 'https://images.unsplash.com/photo-1611784728558-6c7d9b409cdf?w=900&h=600&fit=crop&q=85',
     video: '/videos/services/video-production.mp4',
     relatedCategory: 'video-production',
     relatedSlugs: ['finest-dental', 'hvac-projects', 'altech-web-design', 'cinematic-3d-opener', 'gran-muthu-imperial'],
@@ -317,7 +315,7 @@ export const services = [
   },
   {
     slug: 'ai-automation',
-    media: '/assets/ai-automation.png',
+    media: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=900&h=600&fit=crop&q=85',
     relatedCategory: null,
     relatedSlugs: [],
     es: {

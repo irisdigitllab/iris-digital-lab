@@ -39,7 +39,7 @@ function App() {
             scrollTrigger: {
               trigger: el,
               start: 'top 85%',
-              toggleActions: 'play none none reverse',
+              once: true,
             },
           }
         )
@@ -59,7 +59,7 @@ function App() {
             scrollTrigger: {
               trigger: parent,
               start: 'top 85%',
-              toggleActions: 'play none none reverse',
+              once: true,
             },
           }
         )

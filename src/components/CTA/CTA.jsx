@@ -19,7 +19,7 @@ const CTA = () => {
         scrollTrigger: {
           trigger: root.current,
           start: 'top 75%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
       })
 
@@ -32,7 +32,7 @@ const CTA = () => {
         scrollTrigger: {
           trigger: root.current,
           start: 'top 75%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
       })
 
@@ -47,7 +47,7 @@ const CTA = () => {
         scrollTrigger: {
           trigger: root.current,
           start: 'top 75%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
       })
 
@@ -68,7 +68,7 @@ const CTA = () => {
         scrollTrigger: {
           trigger: root.current,
           start: 'top 70%',
-          toggleActions: 'play none none reverse',
+          once: true,
         },
       })
     }, root)
