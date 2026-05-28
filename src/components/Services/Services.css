@@ -237,9 +237,10 @@
   will-change: transform;
 }
 
+/* Portrait card for vertical (9:16) videos */
 .services__cursor-card--wide {
-  width: 440px;
-  height: 248px; /* 16:9 */
+  width: 220px;
+  height: 390px;
 }
 
 .services__cursor-card img,

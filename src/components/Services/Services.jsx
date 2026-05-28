@@ -46,8 +46,8 @@ const ICONS = [
 const SERVICE_MEDIA = [
   { type: 'image', src: 'https://images.unsplash.com/photo-1748326650737-33500fdfda30?w=600&h=400&fit=crop&q=85' }, // Brand Identity
   { type: 'image', src: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop&q=85' },   // Website Dev
-  { type: 'image', src: '/portfolio/covers/mister-mortgage-cover.jpg' },                                           // Marketing
-  { type: 'image', src: '/portfolio/covers/beyond-health-cover.jpg' },                                            // Video Production
+  { type: 'video', src: '/videos/portfolio/mister-mortgage.mp4', poster: '/portfolio/covers/mister-mortgage-cover.jpg' }, // Marketing
+  { type: 'video', src: '/videos/portfolio/beyond-health.mp4',    poster: '/portfolio/covers/beyond-health-cover.jpg' },   // Video Production
   { type: 'image', src: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=600&h=400&fit=crop&q=85' }, // AI Automation
 ]
 

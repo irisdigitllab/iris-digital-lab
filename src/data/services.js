@@ -166,7 +166,7 @@ export const services = [
   {
     slug: 'marketing-campaigns',
     media: '/portfolio/covers/mister-mortgage-cover.jpg',
-    video: '/videos/services/marketing-campaigns.mp4',
+    video: '/videos/portfolio/mister-mortgage.mp4',
     relatedCategory: 'marketing-campaigns',
     relatedSlugs: ['mister-mortgage-campaign', 'smart-choice-dental'],
     es: {
@@ -241,7 +241,7 @@ export const services = [
   {
     slug: 'video-production',
     media: '/portfolio/covers/beyond-health-cover.jpg',
-    video: '/videos/services/video-production.mp4',
+    video: '/videos/portfolio/beyond-health.mp4',
     relatedCategory: 'video-production',
     relatedSlugs: ['beyond-health', 'hilos-pdo', 'finest-dental', 'vitalis-coming-soon', 'vitalis-vet-video'],
     es: {
