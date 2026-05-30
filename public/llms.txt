@@ -1,0 +1,30 @@
+# IRIS Digital Lab
+
+> Agencia digital en South Florida especializada en identidad de marca, desarrollo web, campañas de marketing, producción de video y automatización con agentes de IA. Trabajamos con empresas locales listas para crecer.
+
+## Servicios
+
+- **Brand Identity**: Diseño de logo, paleta de colores, tipografía, manual de marca y guía de estilo completa.
+- **Website Development & Automation**: Sitios web modernos con React/Next.js, integraciones de CRM, formularios automatizados y flujos de onboarding.
+- **Marketing Campaigns**: Estrategia y ejecución de campañas en redes sociales, Google Ads, email marketing y contenido.
+- **Video Production**: Producción de videos corporativos, reels para redes sociales, spots publicitarios y contenido audiovisual.
+- **AI Agent Automation**: Automatización de procesos de negocio con agentes de IA: atención al cliente, calificación de leads, reportes automáticos.
+
+## Clientes representativos
+
+Hemos trabajado con clientes en HVAC, salud dental, veterinaria, hostelería, bienes raíces, coaching y finanzas en South Florida.
+
+## Contacto
+
+- Email: info@irisdigitallab.com
+- Instagram: https://www.instagram.com/iris.digitallab
+- Website: https://www.irisdigitallab.com
+
+## Páginas principales
+
+- [Home](https://www.irisdigitallab.com/): Presentación general de la agencia, servicios, portafolio y formulario de presupuesto.
+- [Brand Identity](https://www.irisdigitallab.com/services/brand-identity): Servicio de identidad de marca.
+- [Website Development](https://www.irisdigitallab.com/services/website-development): Servicio de desarrollo web.
+- [Marketing Campaigns](https://www.irisdigitallab.com/services/marketing-campaigns): Servicio de campañas de marketing.
+- [Video Production](https://www.irisdigitallab.com/services/video-production): Servicio de producción de video.
+- [AI Automation](https://www.irisdigitallab.com/services/ai-automation): Servicio de automatización con IA.

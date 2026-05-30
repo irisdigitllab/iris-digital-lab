@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Particles from '../components/Particles/Particles.jsx'
 import TypewriterText from '../components/TypewriterText/TypewriterText.jsx'
@@ -33,6 +34,31 @@ const ServicePage = () => {
     window.scrollTo({ top: 0, behavior: 'auto' })
   }, [slug])
 
+  useEffect(() => {
+    const s = getServiceBySlug(slug)
+    if (!s) return
+    const c = s[lang] ?? s.en
+    if (!c?.faq?.length) return
+
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: c.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.id = 'faq-schema'
+    script.textContent = JSON.stringify(schema)
+    document.head.appendChild(script)
+
+    return () => { document.getElementById('faq-schema')?.remove() }
+  }, [slug, lang])
+
   const service = getServiceBySlug(slug)
 
   if (!service) {
@@ -61,6 +87,14 @@ const ServicePage = () => {
 
   return (
     <article className="service-page">
+      <Helmet>
+        <title>{content.title} — IRIS Digital Lab</title>
+        <meta name="description" content={content.promise} />
+        <link rel="canonical" href={`https://www.irisdigitallab.com/services/${service.slug}`} />
+        <meta property="og:title" content={`${content.title} — IRIS Digital Lab`} />
+        <meta property="og:description" content={content.promise} />
+        <meta property="og:url" content={`https://www.irisdigitallab.com/services/${service.slug}`} />
+      </Helmet>
       {/* HERO */}
       <section className="sp-hero section">
         <Particles density={0.00007} />

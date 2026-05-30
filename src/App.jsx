@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -6,8 +6,10 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Cursor from './components/Cursor/Cursor.jsx'
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton.jsx'
 import Home from './pages/Home.jsx'
-import ServicePage from './pages/ServicePage.jsx'
+
+const ServicePage = lazy(() => import('./pages/ServicePage.jsx'))
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -72,11 +74,19 @@ function App() {
   return (
     <>
       <Cursor />
+      <WhatsAppButton />
       <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services/:slug" element={<ServicePage />} />
+          <Route
+            path="/services/:slug"
+            element={
+              <Suspense fallback={<div style={{ minHeight: '100vh', background: '#121212' }} />}>
+                <ServicePage />
+              </Suspense>
+            }
+          />
         </Routes>
       </main>
       <Footer />

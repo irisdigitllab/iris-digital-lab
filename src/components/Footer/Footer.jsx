@@ -13,7 +13,7 @@ const Footer = () => {
             <h3>{t.footer.helpTitle}</h3>
             <p>{t.footer.helpDesc}</p>
           </div>
-          <a href="mailto:hello@irisdigitallab.com" className="footer__help-cta">
+          <a href="mailto:info@irisdigitallab.com" className="footer__help-cta">
             <span>{t.footer.helpCta}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
               <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -28,24 +28,8 @@ const Footer = () => {
             </p>
             <ul className="footer__socials">
               <li>
-                <a href="#" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/iris.digitallab?igsh=MWgxbmFsanNybWN4Nw==" target="_blank" rel="noreferrer">
                   <span>Instagram</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noreferrer">
-                  <span>Facebook</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noreferrer">
-                  <span>YouTube</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                     <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

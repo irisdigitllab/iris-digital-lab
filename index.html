@@ -1,14 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="image" href="/assets/hero-bg-clean.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IRIS Digital Lab — We build brands that mean business</title>
     <meta name="description" content="Website development & brand identity design for South Florida companies ready to grow." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.irisdigitallab.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.irisdigitallab.com/" />
+    <meta property="og:title" content="IRIS Digital Lab — We build brands that mean business" />
+    <meta property="og:description" content="Website development & brand identity design for South Florida companies ready to grow." />
+    <meta property="og:image" content="https://www.irisdigitallab.com/assets/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="IRIS Digital Lab" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IRIS Digital Lab — We build brands that mean business" />
+    <meta name="twitter:description" content="Website development & brand identity design for South Florida companies ready to grow." />
+    <meta name="twitter:image" content="https://www.irisdigitallab.com/assets/og-image.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Structured Data: LocalBusiness + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.irisdigitallab.com/#organization",
+          "name": "IRIS Digital Lab",
+          "url": "https://www.irisdigitallab.com/",
+          "logo": "https://www.irisdigitallab.com/assets/iris-logo.svg",
+          "image": "https://www.irisdigitallab.com/assets/og-image.jpg",
+          "description": "Website development and brand identity design for South Florida companies ready to grow.",
+          "email": "info@irisdigitallab.com",
+          "areaServed": { "@type": "State", "name": "Florida" },
+          "address": { "@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US" },
+          "sameAs": ["https://www.instagram.com/iris.digitallab"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Services",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Identity Design"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Development & Automation"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing Campaigns"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Video Production"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agent Automation"}}
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.irisdigitallab.com/#website",
+          "url": "https://www.irisdigitallab.com/",
+          "name": "IRIS Digital Lab",
+          "publisher": {"@id": "https://www.irisdigitallab.com/#organization"}
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
